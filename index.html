@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ff8e335007.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="./script.js"></script>
+    <link rel="icon" href="./assets/image/fav-ico/favicon">
+    <title>vegefood</title>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #fff;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          max-height: 650px;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .none {
+            display: none;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <section class="header-containeer">
+            <div class="header-top">
+                <div class="header-top-con container">
+                    <div class="h-t-i phone"><i class="h-t-ico fa-solid fa-phone"></i> +8801405353655</div>
+                    <div class="h-t-i email"> <i class="h-t-ico fas fa-paper-plane"></i> sadikul0140@gmail.com</div>
+                    <div class="h-t-i delivary-return">3-5 BUSINESS DAYS DELIVERY & FREE RETURNS </div>
+                </div>
+            </div>
+            <div class="navigation-var">
+              <div class="navigation-con container">
+                <div class="h-logo">
+                    <a href="#">
+                        VEGEFOOD
+                    </a>
+                </div>
+                <nav class="d-navigation">
+                  <ul class="d-menu">
+                    <a href="#"><li>Home</li></a>
+                    <li onclick="submenuHandler(event)">
+                      Shop 
+                      <i class="fas fa-caret-down"></i>
+                      <ul id="submenu" class="d-sub-m">
+                        <a href="#"><li>Shop</li></a>
+                        <a href="#"><li>Whislist</li></a>
+                        <a href="#"><li>Single Product</li></a>
+                        <a href="#"><li>Checkout</li></a>
+                      </ul>
+                    </li>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#">
+                      <li><i class="fas fa-shopping-cart"></i> [0]</li>
+                    </a>
+                  </ul>
+                </nav>
+                <div onclick="sidebarHandler(event)" class="mobile-menu">
+                    <div class="mobile-m-con">
+                        <i class="fa-solid fa-bars"></i>
+                        MENU
+                    </div>
+                </div>
+              </div>
+              <div id="sidebar" class="m-m-list container">
+                <ul>
+                  <a href="#"><li>Home</li></a>
+                  <li onclick="msubmenuHandler(event)" >Shop <i class="fas fa-caret-down"></i>
+                  <ul id="sub-menu" class="sub-m">
+                    <a href="#"><li>Shop</li></a>
+                    <a href="#"><li>Whislist</li></a>
+                    <a href="#"><li>Single Product</li></a>
+                    <a href="#"><li>Checkout</li></a>
+                  </ul>
+                  </li>
+                  <a href=""><li>About</li></a>
+                  <a href=""><li>Blog</li></a>
+                  <a href=""><li>Contact</li></a>
+                  <div class="m-cart">
+                    <a href="#">
+                      <div class="m-cart-con">
+                        <i class="fas fa-shopping-cart"></i> [0]
+                      </div>
+                    </a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+        </section>
+        <section>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero-banner">
+                  <div class="hero-banner-con container">
+                    <h1 class="slider-text-1">We serve Fresh Vegestables &amp; Fruits</h1>
+                    <h2 class="slider-text-2">We deliver organic vegetables &amp; fruits</h2>
+                    <a href="#">
+                      <button class="view-button">
+                        View Details
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-banner hero-banner2">
+                  <div class="hero-banner-con container">
+                    <h1 class="slider-text-1">100% Fresh &amp; Organic Foods</h1>
+                    <h2 class="slider-text-2">We deliver organic vegetables &amp; fruits</h2>
+                    <a href="#">
+                      <button class="view-button">
+                        View Details
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="none swiper-button-next"></div>
+            <div class="none swiper-button-prev"></div>
+            <div class="none swiper-pagination"></div>
+          </div>
+        </section>
+    </header>
+                              <!--page start-->
+    <section class="page">
+        <div class="container">
+          <section class="all-feature">
+            <div class="all-f-item ">
+              <div class="all-f-i-border-head">
+                <div class="all-f-i-border">
+                  <i class="fas fa-shipping-fast"></i>
+                </div>
+              </div>
+              <div class="all-f-item-text">
+                <h5>FREE SHIPPING</h5>
+                <P>ON ORDER OVER $100</P>
+              </div>
+            </div>
+            <div class="all-f-item">
+              <div class="all-f-i-border-head all-f-i-2">
+                <div class="all-f-i-border">
+                  <i class="fa-solid fa-carrot"></i>
+                </div>
+              </div>
+              <div class="all-f-item-text">
+                <h5>ALWAYS FRESH</h5>
+                <P>PRODUCT WELL PACKAGE</P>
+              </div>
+            </div>
+            <div class="all-f-item">
+              <div class="all-f-i-border-head all-f-i-3">
+                <div class="all-f-i-border">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+              </div>
+              <div class="all-f-item-text">
+                <h5>SUPERIOR QUALITY</h5>
+                <P>QUALITY PRODUCTS</P>
+              </div>
+            </div>
+            <div class="all-f-item">
+              <div class="all-f-i-border-head all-f-i-4">
+                <div class="all-f-i-border">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+              </div>
+              <div class="all-f-item-text">
+                <h5>SUPPORT</h5>
+                <P>24/7 SUPPORT</P>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="">
+              <div class="category">
+                <div class="cat-item cat-item-1 cati-1-767">
+                  <h5>Vegetables</h5>
+                  <p>Protect the health of every home</p>
+                  <p><a class="view-button" id="shop-now" href="#">Shop Now</a></p>
+                </div>
+                <div class="cat-item-2-con">
+                  <div class="cat-item cat-item-2 cat-i-2-1">
+                    <div class="cat-text">
+                      <a href="#">
+                        <p>Fruits</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="cat-item cat-item-2 cat-i-2-2">
+                    <div class="cat-text">
+                      <a href="#">
+                        <p>Vegetables</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="cat-item-1-head cat-i-1-575">
+                  <div class="cat-item cat-item-1">
+                    <h5>Vegetables</h5>
+                    <p>Protect the health of every home</p>
+                    <p><a class="view-button" id="shop-now" href="#">Shop Now</a></p>
+                  </div>
+                </div>
+                <div class="cat-item-3-con">
+                  <div class="cat-item cat-item-2 cat-i-3-1">
+                    <div class="cat-text">
+                      <a href="#">
+                        <p>Juices</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="cat-item cat-item-2 cat-i-3-2">
+                    <div class="cat-text">
+                      <a href="#">
+                        <p>Dried</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+          </section>
+          <section>
+            <div class="our-product-con">
+              <div class="our-product-head-text">
+                <span>Featured Products</span>
+                <h2>Our Product</h2>
+                <p>
+                  Far far away, behind the word mountains, 
+                  far from the countries Vokalia and Consonantia
+                </p>
+              </div>
+              <div class="f-all-product">
+                <div class="f-all-product-con">
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-1.jpg.pagespeed.ic.dWctTko08F.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-2.jpg.pagespeed.ic.2q3x49cb1q.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-3.jpg.pagespeed.ic.J11-RQjosA.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-4.jpg.pagespeed.ic.-zi4uKxOWe.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-5.jpg.pagespeed.ic.ZbzeN2jASE.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-6.jpg.pagespeed.ic.bV2cvmi8jU.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-7.jpg.pagespeed.ic.5cTir-xz-1.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-product-con">
+                    <div class="f-product-img-head">
+                      <img src="./assets/image/our-product/xproduct-8.jpg.pagespeed.ic.eAtHbtNqMI.webp" alt="">
+                    </div>
+                    <div class="f-product-text">
+                      <h3>BELL PEPPER</h3>
+                      <P>
+                        <span>$120.00</span>
+                      </P>
+                    </div>
+                    <div class="m-c-h-menu">
+                      <div class="m-c-h-menu-con">
+                        <a href=""><i class="fas fa-bars"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                        <a href=""><i class="fas fa-heart"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section>
+          <div class="banner-2-head">
+            <div class="banner-2">
+              <div class="banner-2-con">
+                <div class="banner-2-text">
+                  <div class="banner-2-text-con ">
+                    <span>Best Price For You</span>
+                    <h2>Deal of the day</h2>
+                    <p>
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia
+                    </p>
+                    <h3>
+                      <a href="#">Spinach</a>
+                    </h3>
+                    <span class="price">
+                      $10 
+                      <a href="#">now $5 only</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>
+    <section>
+      <div class="testimony-con container">
+        <div class="our-product-head-text">
+          <span>Testimony</span>
+          <h2>Our satisfied customer says</h2>
+          <p>
+            Far far away, behind the word mountains, 
+            far from the countries Vokalia and <br> Consonantia, 
+            there live the blind texts. Separated they live in
+          </p>
+        </div>
+        <div class="testimony-all-i-head">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimony-item">
+                  <div class="user-img">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimony-item">
+                  <div class="user-img user-img-2">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimony-item">
+                  <div class="user-img user-img-3">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimony-item">
+                  <div class="user-img user-img-4">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimony-item">
+                  <div class="user-img user-img-5">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="testimony-item">
+                  <div class="user-img user-img-6">
+                    <span class="quote">
+                      <i class="fa-solid fa-quote-left"></i>
+                      </span>
+                  </div>
+                  <div class="testimony-item-text">
+                    <p class="test-item-about line">
+                      Far far away, behind the word mountains, 
+                      far from the countries Vokalia and Consonantia, 
+                      there live the blind texts.
+                    </p>
+                    <h4>Garreth Smith</h4>
+                    <span>UI DESIGNER</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="partner">
+        <div class="partner-con container">
+          <div class="partner">
+            <img src="./assets/image/partner-name/xpartner-1.png.pagespeed.ic.b7FlbbQVdf.webp" alt="">
+          </div>
+          <div class="partner">
+            <img src="./assets/image/partner-name/xpartner-2.png.pagespeed.ic.4tCtqXfPLh.webp" alt="">
+          </div>
+          <div class="partner">
+            <img src="./assets/image/partner-name/xpartner-3.png.pagespeed.ic.K6b-CsdlC4.webp" alt="">
+          </div>
+          <div class="partner">
+            <img src="./assets/image/partner-name/xpartner-4.png.pagespeed.ic.DaTQYymmyu.webp" alt="">
+          </div>
+          <div class="partner">
+            <img src="./assets/image/partner-name/xpartner-5.png.pagespeed.ic.A4xeUmT9Fd.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-con">
+        <div class=""></div>
+        <div class="copyright">
+          <p>Copyright ©2022 All rights reserved | This template is made with  
+            <i class="fa-solid fa-heart"></i>
+            by Sadequl</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      </script>
+</body>
+</html>
