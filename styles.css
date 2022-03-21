@@ -503,6 +503,12 @@ section div .none {
     height: 30px;
     background: #82ae46;
 }
+.swiper .swiper-button-next {
+    display: none;
+}
+.swiper .swiper-button-prev {
+    display: none;
+}
 /*  partner start   */
 .partner-con {
     padding: 90px 0;
@@ -515,12 +521,7 @@ section div .none {
 /* footer start */
 .copyright {
     text-align: center;
-}
-.swiper .swiper-button-next {
-    display: none;
-}
-.swiper .swiper-button-prev {
-    display: none;
+    padding: 40px 0;
 }
  
 
