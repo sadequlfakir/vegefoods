@@ -509,6 +509,9 @@ section div .none {
 .swiper .swiper-button-prev {
     display: none;
 }
+.swiper .swiper-pagination {
+    bottom: -4px !important;
+}
 /*  partner start   */
 .partner-con {
     padding: 90px 0;
