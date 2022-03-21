@@ -506,6 +506,11 @@ section div .none {
 /*  partner start   */
 .partner-con {
     padding: 90px 0;
+    width: 85%;
+    margin: auto;
+}
+.partner img {
+    width: 100%;
 }
 /* footer start */
 .copyright {
